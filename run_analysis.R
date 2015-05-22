@@ -1,7 +1,10 @@
 #Peer Assessments /Getting and Cleaning Data Course Project 
 
 # Step1. Merges the training and the test sets to create one data set.
-setwd( "C:/Users/Eduardo/Documents/UCI HAR Dataset" )
+inDir <- "C:/Users/Eduardo/Documents/UCI HAR Dataset"
+outDir <- "C:/Users/Eduardo/Documents/GitHub/Getting-and-Cleaning-Data-Course-Project"
+
+setwd( inDir )
 
 #Load Train Data
 trainData <- read.table("./train/X_train.txt")
@@ -56,7 +59,7 @@ names( joinSubject ) <- "subject"
 
 cleanedData <- cbind( joinSubject, joinLabel, joinData )
 
-setwd( "C:/Users/Eduardo/Documents/GitHub/Getting-and-Cleaning-Data-Course-Project" )
+setwd( outDir )
 
 # write dataset number 1
 write.table( cleanedData, "DS1_merged_data.txt" )
@@ -98,5 +101,5 @@ for( i in 1:subjectLen )
 }
 
 # write dataset number 2
-write.table( result, "DS2_data_with_means.txt" )
+write.table( result, "DS2_data_with_means.txt", row.name = FALSE )
 

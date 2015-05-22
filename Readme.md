@@ -1,8 +1,3 @@
----
-title: "Readme.MD "
-output: html_document
----
-
 This file describes how run_analysis.R script works.
 
 1. First, unzip the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip to create the directory `./UCI HAR Dataset`.
